@@ -5,24 +5,58 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Code Quiz</title>
+    <title>Studio Ghibli Trivia</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/stlye.css">
 </head>
 
 <body>
-    <div id="quiz"></div>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
 
-    <!-- <div class="contaier">
-        <div id="quiz"></div>
-    </div>
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div> -->
+    <!-- Start Quiz -->
+
+    <section class="Time">Time</section>
+
+    <section class="Introduction">
+        <p>To begin click start</p>
+        <button id="StartQuiz">Start</button>
+
+    </section>
+
+
+    <section class="Trivia hide">
+        <p>Studio Ghibli Trivia</p>
+
+        <button id="choiceOne">submit</button>
+        <button id="choiceTwo">submit</button>
+        <button id="choiceThree">submit</button>
+        <button id="choiceFour">submit</button>
+        
+    </section>
+
+    <section class="Intials hide" >
+        <p>Enter your intials</p>
+        <button>submit</button>
+    </section>
+
+    <section class="Score hide">
+        <p>Scoreboard</p>
+        <button id="goBack" >Go Back</button>
+        <button id="clearScore">Clear Highscores</button>
+    </section>
+
+
+
+
+    
+    <div id="quiz"></div>
+   
+    <div id="results"></div>
+    <div id="timer"></div>
+
+
+
+
 
 
     <script src="assets/script.js"></script>

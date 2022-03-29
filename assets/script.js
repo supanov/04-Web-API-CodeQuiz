@@ -1,120 +1,115 @@
-// Storing these HTML elements to store them as variables"
-var quizContainer = document.getElementById('quiz')
-var resultsContainer = document.getElementById('results')
-var submitButton = document.getElementById('submit')
+// Creating Variables
+var quizContainer = document.querySelector('quiz')
+var resultsContainer = document.querySelector('results')
+var submitButton = document.querySelector('submit')
+var time = document.querySelector('timer')
 
-// Laying out functions
 
-function buildQuiz() {}
 
-function showResults() {}
 
-// display quiz
-buildQuiz();
-
-// on submit, show results
-submitButton.addEventListener('click', showResults);
 
 // displaying quiz questions, using object literals to show questions and an array the questions that make our quiz. Arrays will make questions easy to iterate over
 
 var quizQuestions = [
     {
         question: "No-Face spirit from 'Spirited Away' is based on Japanese Mythoology",
-        anwsers: {
-            a: "True",
-            b: "False",
-        }, 
-        correctAnwser: "b"
+        anwsers: ["True", "False"],
+
+        correctAnwser: "1"
     },
     {
         question: "Which Ghibhli character can tranform into a dragon?",
-        anwsers: {
-            a: "Howl",
-            b: "Haru",
-            c: "Haku",
+        anwsers: ["Howl","Haru","Haku"],
 
-        },
-        correctAnwser: "c"
+        correctAnwser: "2"
     },
     {
         question: "What is the name of the fiery compainion in 'Howl's Moving Castle'?",
-        anwsers: {
-            a: "Heatfire",
-            b: "Sunray",
-            c: "Calipico",
-            d:" Calcifer",
-        },
-        correctAnwser: "d"
+        anwsers: ["Heatfire","Sunray","Calipico","Calcifer"],
+
+        correctAnwser: "3"
     },
     {
         question: "What is the nickname Sophie gives the cursed screcrow who follows her in 'Howl's Moving Castle'?",
-        anwsers: {
-            a: "Turnip Head",
-            b: "Gentleman",
-            c: "ScaryCrow",
-            d: "Happy Hat",
-        },
-        correctAnwser: "a"
+        anwsers: ["Turnip Head","Gentleman","ScaryCrow","Happy Hat"],
+
+        correctAnwser: "0"
     },
     {
         question: "What are the names of the orphans that struggle in war-torn Japan in 'Grave of the Fireflies'?",
-        anwsers: {
-            a: "Haku & Sophie",
-            b: "Totoro & Kiki",
-            c: "Rin and Rina",
-            d: "Seita & Setsuko",
-        },
-        correctAnwser: "d"
+        anwsers: ["Haku & Sophie", "Totoro & Kiki","Rin & Rina","Seita & Setsuko"], 
+
+        correctAnwser: "3"
     },
     {
         question: "What is the name of Kiki's kitty in 'Kiki's Delivery Service'?",
-        anwsers: {
-            a:"Luna",
-            b:"Jiji",
-            c:"Kiwi",
-            d:"Night"
-        },
-        correctAnwser: "b"
+        anwsers: ["Luna","Jiji","Kiwi","Night"],
+    
+        correctAnwser: "1"
     },
     {
         question: "What natural disaster occurs in 'Ponyo'?",
-        anwsers: {
-            a:"Earthquake",
-            b:"Hurricane",
-            c:"Tsunami",
-            d:"Tornado"
-        },
-        correctAnwser: "c"
+        anwsers: ["Earthquake","Hurricane","Tsunami","Tornado"],
+    
+        correctAnwser: "2"
     },
     {
         question: "What type of animals raise San in 'Princess Mononoke'?",
-        anwsers: {
-            a:"Tigers",
-            b:"Wolves",
-            c:"Deer",
-            d:"Bears"
-        },
-        correctAnwser: "b"
+        anwsers: ["Tigers","Wolves","Deer","Bears"],
+       
+        correctAnwser: "2"
     },
     {
         question: "What did Haku tell Chihiro to never forget in 'Spirited Away'?",
-        anwsers: {
-            a:"Her parents",
-            b:"Haku",
-            c:"Home",
-            d:"Her name"
-        },
-        correctAnwser: "d"
+        anwsers: ["Her parents","Haku","Her Home","Her name"],
+    
+        correctAnwser: "3"
     },
     {
         question: "What film features the Catbus?",
-        anwsers: {
-            a:"My Neighbor Totoro",
-            b:"Nausicaa of the Valley of the Wind",
-            c:"Ponyo",
-            d:"Spirited Away"
-        },
-        correctAnwser: "a"
+        anwsers: ["My Neighbor Totoro","Nausicaa of the Valley of the Wind","Ponyo","Spirited Away"],
+    
+        correctAnwser: "0"
     },
 
-]
+];
+var totaltime= quizQuestions.length*15
+
+// Creating functions/logic
+var introduction = document.querySelector('.Introduction')
+var StartQuiz = document.querySelector('#StartQuiz')
+var Trivia = document.querySelector('.Trivia')
+var choiceOne = document.querySelector('#choiceOne')
+var choiceTwo = document.querySelector('#choiceTwo')
+var choiceThree = document.querySelector('#choiceThree')
+var choiceFour = document.querySelector('#choiceFour')
+var intials = document.querySelector('.Initials')
+var score = document.querySelector('.Score')
+var goBack = document.querySelector("#goBack")
+var clearScore = document.querySelector('#clearScore')
+var Time = document.querySelector('.Time')
+var clockid=null
+
+// Created a function to add hide and remove hide 
+StartQuiz.addEventListener('click', function(){
+introduction.classList.add('hide')
+Trivia.classList.remove('hide')
+clockid=setInterval(() => {
+    clock()
+}, 1000);
+})
+
+function clock(){
+    Time.textContent=totaltime
+    totaltime--
+}
+
+// Time function to subtract points when you miss an anwser
+
+
+// Scoreboard that saves progress
+
+// start with the start button 
+
+
+
