@@ -1,25 +1,18 @@
-// Creating Variables
-var quizContainer = document.querySelector('quiz')
-var resultsContainer = document.querySelector('results')
-var submitButton = document.querySelector('submit')
-var time = document.querySelector('timer')
-
-
 
 
 
 // displaying quiz questions, using object literals to show questions and an array the questions that make our quiz. Arrays will make questions easy to iterate over
 
 var quizQuestions = [
-    {
-        question: "No-Face spirit from 'Spirited Away' is based on Japanese Mythoology",
-        anwsers: ["True", "False"],
+    // {
+    //     question: "No-Face spirit from 'Spirited Away' is based on Japanese Mythoology",
+    //     anwsers: ["True", "False"],
 
-        correctAnwser: "1"
-    },
+    //     correctAnwser: "1"
+    // },
     {
         question: "Which Ghibhli character can tranform into a dragon?",
-        anwsers: ["Howl","Haru","Haku"],
+        anwsers: ["Howl","Haru","Haku", "Hatsumaru"],
 
         correctAnwser: "2"
     },
@@ -73,7 +66,10 @@ var quizQuestions = [
     },
 
 ];
+
 var totaltime= quizQuestions.length*15
+
+
 
 // Creating functions/logic
 var introduction = document.querySelector('.Introduction')
@@ -88,11 +84,31 @@ var score = document.querySelector('.Score')
 var goBack = document.querySelector("#goBack")
 var clearScore = document.querySelector('#clearScore')
 var Time = document.querySelector('.Time')
+var question = document.querySelector('#question')
+var currentQuestion = 0;
+var acceptingQuestions = true;
+
 var clockid=null
 
 // Created a function to add hide and remove hide 
 StartQuiz.addEventListener('click', function(){
+    console.log("Hello world")
 introduction.classList.add('hide')
+question.textContent=quizQuestions[currentQuestion].question
+choiceOne.textContent=quizQuestions[currentQuestion].anwsers[0]
+choiceTwo.textContent=quizQuestions[currentQuestion].anwsers[1]
+choiceThree.textContent=quizQuestions[currentQuestion].anwsers[2]
+choiceFour.textContent=quizQuestions[currentQuestion].anwsers[3]
+
+
+
+//addeventlistener button
+// Get the event target
+// Compare the anwser
+// add to score 
+// hide current question
+//show next questions
+
 Trivia.classList.remove('hide')
 clockid=setInterval(() => {
     clock()
@@ -104,12 +120,9 @@ function clock(){
     totaltime--
 }
 
-// Time function to subtract points when you miss an anwser
 
 
-// Scoreboard that saves progress
-
-// start with the start button 
-
+// displaying the quiz
+choiceOne.textContent=quizQuestions[currentQuestion].anwsers[0]
 
 

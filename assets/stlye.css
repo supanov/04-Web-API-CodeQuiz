@@ -1,5 +1,83 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: start;
+    color: white;
+    font-size: 5rem;
+
+}
+
+
+body {
+    background-image: url(https://wallpaperaccess.com/full/244851.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .hide {
     display: none;
 }
 
+.container {
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
 
+
+
+section {
+    display: block;
+    border: 1px solid black;
+    min-height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    opacity: .8;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    margin: .5rem;
+    border: 2px solid rgb(120, 236, 120);
+    background-color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 1rem;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+#question {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    text-align: center;
+}

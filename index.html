@@ -11,48 +11,54 @@
     <link rel="stylesheet" href="assets/stlye.css">
 </head>
 
+<header>
+    <h1>Studio Ghibli Trivia</h1>
+</header>
+
 <body>
 
     <!-- Start Quiz -->
-
+    
     <section class="Time">Time</section>
 
+
     <section class="Introduction">
-        <p>To begin click start</p>
-        <button id="StartQuiz">Start</button>
+        <div class="container">
+            <h1>Studio Ghibli Trivia</h1>
+            <br>
+            <p>To begin click start:</p>
+            <button id="StartQuiz" class=btn>Start</button>
+            <button id="highscore" class=btn>High Score </button>
+        </div>
 
     </section>
 
 
     <section class="Trivia hide">
-        <p>Studio Ghibli Trivia</p>
+        <div class="container">
 
-        <button id="choiceOne">submit</button>
-        <button id="choiceTwo">submit</button>
-        <button id="choiceThree">submit</button>
-        <button id="choiceFour">submit</button>
-        
+
+            <h2 id="question"></h2>
+            <button id="choiceOne" class=btn></button>
+            <button id="choiceTwo" class=btn></button>
+            <button id="choiceThree" class=btn></button>
+            <button id="choiceFour" class=btn></button>
+
+
+        </div>
     </section>
 
-    <section class="Intials hide" >
+    <section class="Intials hide">
         <p>Enter your intials</p>
         <button>submit</button>
     </section>
 
     <section class="Score hide">
         <p>Scoreboard</p>
-        <button id="goBack" >Go Back</button>
+        <button id="goBack">Go Back</button>
         <button id="clearScore">Clear Highscores</button>
     </section>
 
-
-
-
-    
-    <div id="quiz"></div>
-   
-    <div id="results"></div>
-    <div id="timer"></div>
 
 
 
