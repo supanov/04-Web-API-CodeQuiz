@@ -10,7 +10,7 @@ header {
     justify-content: right;
     align-items: start;
     color: white;
-    font-size: 5rem;
+    font-size: 1rem;
 
 }
 
@@ -55,7 +55,7 @@ section {
     margin-bottom: 20px;
     padding: 10px;
     background-color: whitesmoke;
-    opacity: .8;
+    opacity: .7;
 }
 
 /* Buttons */
