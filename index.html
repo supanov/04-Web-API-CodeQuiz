@@ -25,7 +25,6 @@
     <section class="Introduction">
         <div class="container">
             <h1>Studio Ghibli Trivia</h1>
-            <br>
             <p>To begin click start:</p>
             <button id="StartQuiz" class=btn>Start</button>
             <button id="highscore" class=btn>High Score </button>
@@ -36,27 +35,27 @@
 
     <section class="Trivia hide">
         <div id ="choiceContainer" class="container">
-
-
             <h2 id="question"></h2>
             <button id="choiceOne" class=btn></button>
             <button id="choiceTwo" class=btn></button>
             <button id="choiceThree" class=btn></button>
             <button id="choiceFour" class=btn></button>
-
-
         </div>
     </section>
 
     <section class="Intials hide">
-        <p>Enter your intials</p>
-        <button>submit</button>
+        <div class=" container"> 
+        <input type="text" id="intials">
+        <button class= btn>
+            Enter Initials to Save Score
+        </button>
+        </div>
     </section>
 
-    <section class="Score hide">
-        <p>Scoreboard</p>
-        <button id="goBack">Go Back</button>
-        <button id="clearScore">Clear Highscores</button>
+    <section class="highScore hide">
+        <h2>Scoreboard</h2>
+        <button id="goBack" class ="btn">Go Back</button>
+        <button id="clearScore" class="btn">Clear Highscores</button>
     </section>
 
 
